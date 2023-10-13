@@ -4,6 +4,8 @@
  */
 package Calculadora;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,8 +19,17 @@ public class Integrar extends javax.swing.JFrame {
      */
     public Integrar() {
         initComponents();
-         this.setTitle("Integrar");
+        setIconImage(scaleImage(getImage(), 100, 100));
+        this.setTitle("Integrar");
         this.setLocationRelativeTo(null);
+    }
+    
+    public Image getImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Imagenes/logo.png"));
+        return retValue;
+    }
+    public Image scaleImage(Image image, int width, int height) {
+        return image.getScaledInstance(width, height, Image.SCALE_SMOOTH);
     }
 
     /**

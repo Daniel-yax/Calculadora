@@ -5,6 +5,8 @@
 package Calculadora;
 
 import java.awt.Desktop;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.io.File;
 import java.io.IOException;
 
@@ -19,10 +21,21 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
+        setIconImage(scaleImage(getImage(), 100, 100));
          this.setTitle("Calculadora");
         this.setLocationRelativeTo(null);
         //this.setDefaultCloseOperation(EXIT_ON_CLOSE);//
         
+    }
+    
+    //icono del programa
+   
+    public Image getImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Imagenes/logo.png"));
+        return retValue;
+    }
+    public Image scaleImage(Image image, int width, int height) {
+        return image.getScaledInstance(width, height, Image.SCALE_SMOOTH);
     }
 
     /**
@@ -143,7 +156,7 @@ public class Menu extends javax.swing.JFrame {
         try{
             
             // variable que va a guardar el documento, y la 
-            File file = new File("C:\\Users\\USUARIO\\OneDrive\\Escritorio\\proycal\\Calculadora\\pdf\\MANUAL DE USUARIO.pdf"); // 
+            File file = new File("pdf\\MANUAL DE USUARIO.pdf"); // 
           if(file.exists()){
            
               if (Desktop.isDesktopSupported()){

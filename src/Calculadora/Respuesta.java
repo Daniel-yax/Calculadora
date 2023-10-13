@@ -4,6 +4,9 @@
  */
 package Calculadora;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+
 /**
  *
  * @author Fredy Xingo
@@ -16,9 +19,19 @@ public class Respuesta extends javax.swing.JFrame {
     public Respuesta(String result) {
         this.resultado = result;
         initComponents();
+        setIconImage(scaleImage(getImage(), 100, 100));
         this.setTitle("Respuesta Derivada");
         this.setLocationRelativeTo(null);
     }
+    
+    public Image getImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Imagenes/logo.png"));
+        return retValue;
+    }
+    public Image scaleImage(Image image, int width, int height) {
+        return image.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+    }
+
 
     
     /**
