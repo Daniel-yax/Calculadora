@@ -156,7 +156,9 @@ public class Menu extends javax.swing.JFrame {
         try{
             
             // variable que va a guardar el documento, y la 
-            File file = new File("pdf\\MANUAL DE USUARIO.pdf"); // 
+
+            File file = new File("pdf/MANUAL DE USUARIO.pdf"); // 
+
           if(file.exists()){
            
               if (Desktop.isDesktopSupported()){
