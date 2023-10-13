@@ -4,6 +4,10 @@
  */
 package Calculadora;
 
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
+
 /**
  *
  * @author Fredy Xingo
@@ -133,6 +137,30 @@ public class Menu extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
+                // TODO add your handling code here:
+        
+        try{
+            
+            // variable que va a guardar el documento, y la 
+            File file = new File("C:\\Users\\USUARIO\\OneDrive\\Escritorio\\proycal\\Calculadora\\pdf\\MANUAL DE USUARIO.pdf"); // 
+          if(file.exists()){
+           
+              if (Desktop.isDesktopSupported()){
+                      
+                      Desktop.getDesktop().open(file);
+              }else{
+                
+              
+              }
+          }else{
+       
+          }
+          
+        }catch(IOException e){
+        }
+        
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jintegrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jintegrarActionPerformed
