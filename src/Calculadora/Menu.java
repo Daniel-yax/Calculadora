@@ -151,7 +151,13 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         
                 // TODO add your handling code here:
-        
+                     java.awt.Desktop desktop = java.awt.Desktop.getDesktop();
+              if (desktop.isSupported (java.awt.Desktop.Action. BROWSE)) {
+                try{
+                    java.net.URI uri= new java.net.URI ("https://drive.google.com/file/d/1r0iUwkYFxqRH06y6H_PjFsB8X6_EkuSb/view?usp=sharing");
+                    desktop.browse (uri);
+                  } catch (URISyntaxException | IOException ex){}
+ }
                 
     }//GEN-LAST:event_jButton1ActionPerformed
 
