@@ -4,11 +4,10 @@
  */
 package Calculadora;
 
-import java.awt.Desktop;
 import java.awt.Image;
 import java.awt.Toolkit;
-import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 /**
  *
@@ -153,29 +152,7 @@ public class Menu extends javax.swing.JFrame {
         
                 // TODO add your handling code here:
         
-        try{
-            
-            // variable que va a guardar el documento, y la 
-
-            File file = new File("pdf/MANUAL DE USUARIO.pdf"); // 
-
-          if(file.exists()){
-           
-              if (Desktop.isDesktopSupported()){
-                      
-                      Desktop.getDesktop().open(file);
-              }else{
                 
-              
-              }
-          }else{
-       
-          }
-          
-        }catch(IOException e){
-        }
-        
-
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jintegrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jintegrarActionPerformed
@@ -235,4 +212,8 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton jderivar;
     private javax.swing.JButton jintegrar;
     // End of variables declaration//GEN-END:variables
+
+    private void Supported() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
